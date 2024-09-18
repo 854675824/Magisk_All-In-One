@@ -1,0 +1,5 @@
+ui_print "- All-In-One 优化模块"
+ui_print "- 对系统 CPU / GPU / 内存深度优化"
+ui_print "- 可自行查看 service.sh 与 system.prop 文件"
+ui_print "- 作者 QQ: 854675824 | 酷安@TheCheese"
+ui_print "- 模块安装结束 重启生效"
