@@ -1,6 +1,7 @@
 id=All-In-One
-name=All-In-One 优化模块
-version=v1.0
-versionCode=1
+name=All-In-One 优化模块 v1.2-fix 修复版本
+version=v1.2-fix修复版本
+versionCode=3
 author=酷安@TheCheese
 description=QQ: 854675824 / 屏幕触控优化 / 解除 FPS 限制 / 关闭 Logd、SQLite、蓝牙日志 / 待机省电 / SDCard 读写效率提升 / 优化网络性能 / 自动调节 CPU 核心分配 / 关闭 ZRAM 减少性能损耗 / 关闭内存压缩 / 开启 GPU Debug 加速 / 功耗换性能
+updateJson=https://github.com/854675824/Magisk_All-In-One/raw/main/Magisk_All-In-One.json

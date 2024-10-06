@@ -1,44 +1,72 @@
 #################
 # 触摸屏优化
 #################
-debug.performance.tuning=1        # 提高全局触摸屏响应
-windowsmgr.max_events_per_sec=350 # 提高滚动反映
-video.accelerate.hw=1             # 开启硬件加速
-view.touch_slop=35                # 触摸屏灵敏度，数值越大越灵敏
-view.minimum_fling_velocity=35    # 滑动速度
-view.scroll_friction=0.008        # 滑动误差
+# 提高全局触摸屏响应
+debug.performance.tuning=1
+# 提高滚动反映
+windowsmgr.max_events_per_sec=350
+# 开启硬件加速
+video.accelerate.hw=1
+# 触摸屏灵敏度，数值越大越灵敏
+view.touch_slop=35
+# 滑动速度
+view.minimum_fling_velocity=35
+# 滑动误差
+view.scroll_friction=0.008
 persist.vendor.qti.inputopts.enable=true
 persist.vendor.qti.inputopts.movetouchslop=0.6
 #################
 # 画面显示优化
 #################
-debug.sf.hw=1                 # 关闭 HW 叠加层
-debug.egl.hw=1                # 开启硬件加速
-debug.gr.swapinterval=0       # 解锁 FPS 限制
-debug.gr.numframebuffers=2    # 减少缓冲区数量
-debug.hwui.disable_vsync=true # 开启垂直同步
-debug.egl.swapinterval=-60    # Android 垂直同步：解决系统界面掉帧和响应速度慢问题
-debug.sf.latch_unsignaled=1   # 系统低层的深度优化，系统流畅度大副升级（减少掉帧）
-persist.sys.force_sw_gles=1   # 强制使用软件GLES渲染（优化性能）
-hwui.disable_vsync=true       # 开启垂直同步
-sys.use_fifo_ui=1             #开启先进先出界面线程
-ro.surface_flinger.max_frame_buffer_acquired_buffers=2
+# 关闭 HW 叠加层
+debug.sf.hw=1
+# 开启硬件加速
+debug.egl.hw=1
+# 解锁 FPS 限制
+debug.gr.swapinterval=0
+# 减少缓冲区数量
+debug.gr.numframebuffers=2
+# 开启垂直同步
+debug.hwui.disable_vsync=true
+# Android 垂直同步：解决系统界面掉帧和响应速度慢问题
+debug.egl.swapinterval=-60
+# 系统低层的深度优化，系统流畅度大副升级（减少掉帧）
+debug.sf.latch_unsignaled=1
+# 强制使用软件GLES渲染（优化性能）
+persist.sys.force_sw_gles=1
+# 开启垂直同步
+hwui.disable_vsync=true
+# 开启先进先出界面线程
+sys.use_fifo_ui=1
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+peak_refresh_rate=1
 
 #################
 # 系统优化
 #################
-ro.gps.agps_provider=0               # 默认关闭定位（免得不必要的耗电）
-ro.sys.sdcardfs=true                 # 开启 SDCard 性能优化
-ro.ril.disable.power.collapse=1      # 玄学待机省电
-ro.vendor.net.enable_sla=1           # 优化网络性能
-persist.hvdcp.allow_opti=1           # 开启 KVDCP 快充
-persist.sys.offlinelog.kernel=false  # 关闭内核日志
-persist.wpa_supplicant.debug=false   # 禁用 WPA 调试
-vendor.bluetooth.startbtlogger=false # 关闭蓝牙日志
-pm.sleep_mode=1                      # 开启待机深度睡眠
+# 默认关闭定位（免得不必要的耗电）
+ro.gps.agps_provider=0
+# 开启 SDCard 性能优化
+ro.sys.sdcardfs=true
+# 玄学待机省电
+ro.ril.disable.power.collapse=1
+# 优化网络性能
+ro.vendor.net.enable_sla=1
+# 开启 KVDCP 快充
+persist.hvdcp.allow_opti=1
+# 关闭内核日志
+persist.sys.offlinelog.kernel=false
+# 禁用 WPA 调试
+persist.wpa_supplicant.debug=false
+# 关闭蓝牙日志
+vendor.bluetooth.startbtlogger=false
+# 开启待机深度睡眠
+pm.sleep_mode=1
 # SQLite 配置
-debug.sqlite.journalmode=OFF  # 关闭 SQLite 日志
-debug.sqlite.wal.syncmode=OFF # 关闭 Wal SQLite 同步模式
+# 关闭 SQLite 日志
+debug.sqlite.journalmode=OFF
+# 关闭 Wal SQLite 同步模式
+debug.sqlite.wal.syncmode=OFF
 # SQLite 提速（来自水龙）
 debug.sqlite.wal.poolsize=8
 debug.sqlite.wal.syncmode=OFF
@@ -66,3 +94,14 @@ media.hwhevccodectype=0
 mmp.enable.3g2=true
 mm.enable.smoothstreaming=true
 mm.disable.sec_smoothstreaming=true
+ro.vendor.audio.voice.change.support=true
+# 支持高刷（适用于MIUI）
+ro.vendor.dfps.enable=false
+ro.vendor.smart_dfps.enable=false
+# 内存优化
+app_memory_compression=0
+debug.gralloc.enable_fb_ubwc=1
+persist.sys.purgeable_assets=1
+zram_enabled=0
+# CPU 优化
+ro.sf.disable_triple_buffer=0
